@@ -14,7 +14,6 @@ function App() {
 
   useEffect(() => {
     if (!data) {
-      setSupports(data.items);
       return;
     }
     if (!debouncedQuery || debouncedQuery.length === 0) {
