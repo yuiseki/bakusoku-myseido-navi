@@ -8,7 +8,7 @@ export const SearchQueryInput: React.FC<{
   return (
     <input
       type="text"
-      placeholder={"Search items..."}
+      placeholder={"制度を爆速で検索..."}
       style={{
         maxWidth: "90%",
         minWidth: "30%",
