@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port 30000 --host 0.0.0.0",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview --port 30000 --host 0.0.0.0"
   },
   "dependencies": {
