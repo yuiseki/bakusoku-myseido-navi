@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import useSWR from "swr";
+import ReactMarkdown from "react-markdown";
 import { SearchQueryInput } from "./components/SearchQueryInput";
 import { useDebounce } from "./hooks/debounce";
 
@@ -94,9 +95,13 @@ function App() {
                 <h3>概要</h3>
                 <p>{support.summary}</p>
                 <h3>対象</h3>
-                <p>{support.target}</p>
+                <p>
+                  <ReactMarkdown children={support.target} />
+                </p>
                 <h3>内容</h3>
-                <p>{support.body}</p>
+                <p>
+                  <ReactMarkdown children={support.body} />
+                </p>
                 <h3>根拠法令</h3>
                 <p>{support.governing_law}</p>
                 <h3>収録制度集</h3>
