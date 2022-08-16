@@ -14,29 +14,28 @@ function App() {
 
   useEffect(() => {
     if (!data) {
+      setSupports(data.items);
       return;
     }
-    console.log(debouncedQuery);
+    if (!debouncedQuery || debouncedQuery.length === 0) {
+      setSupports(data.items);
+      return;
+    }
     const filteredSupports = data.items.filter((support) => {
-      if (debouncedQuery && debouncedQuery.length > 0) {
-        const isMatch = debouncedQuery
-          .split(/[\x20\u3000]+/)
-          .map((q) => {
-            return (
-              q.length === 0 ||
-              support.title.includes(q) ||
-              support.summary.includes(q) ||
-              support.target.includes(q) ||
-              support.body.includes(q) ||
-              support.governing_law.includes(q) ||
-              support.inquiry.includes(q)
-            );
-          })
-          .every((v) => v === true);
-        return isMatch;
-      } else {
-        return true;
-      }
+      return debouncedQuery
+        .split(/[\x20\u3000]+/)
+        .map((q) => {
+          return (
+            q.length === 0 ||
+            support.title.includes(q) ||
+            support.summary.includes(q) ||
+            support.target.includes(q) ||
+            support.body.includes(q) ||
+            support.governing_law.includes(q) ||
+            support.inquiry.includes(q)
+          );
+        })
+        .every((v) => v === true);
     });
     setSupports(filteredSupports);
   }, [data, debouncedQuery]);
@@ -69,6 +68,16 @@ function App() {
             });
           }}
         />
+      </div>
+      <div
+        style={{
+          justifyContent: "center",
+          width: "100%",
+          display: "flex",
+          marginBottom: "30px",
+        }}
+      >
+        {supports && supports.length + "件の制度を爆速で検索"}
       </div>
       <div>
         {supports &&
