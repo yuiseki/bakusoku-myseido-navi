@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "number": "1",
+    "name": "個人",
+    "remarks": "",
+    "deletable": false
+  },
+  {
+    "id": "2",
+    "number": "2",
+    "name": "事業者",
+    "remarks": "",
+    "deletable": false
+  },
+  {
+    "id": "3",
+    "number": "3",
+    "name": "自治体",
+    "remarks": "",
+    "deletable": false
+  }
+]
