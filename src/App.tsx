@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import useSWR from "swr";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
+
 import { SearchQueryInput } from "./components/SearchQueryInput";
 import { useDebounce } from "./hooks/debounce";
 
@@ -96,11 +99,19 @@ function App() {
                 <p>{support.summary}</p>
                 <h3>対象</h3>
                 <p>
-                  <ReactMarkdown children={support.target} />
+                  <ReactMarkdown
+                    children={support.target}
+                    remarkPlugins={[remarkGfm]}
+                    rehypePlugins={[rehypeRaw]}
+                  />
                 </p>
                 <h3>内容</h3>
                 <p>
-                  <ReactMarkdown children={support.body} />
+                  <ReactMarkdown
+                    children={support.body}
+                    remarkPlugins={[remarkGfm]}
+                    rehypePlugins={[rehypeRaw]}
+                  />
                 </p>
                 <h3>根拠法令</h3>
                 <p>{support.governing_law}</p>
