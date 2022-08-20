@@ -97,7 +97,6 @@ function App() {
         minHeight: "110vh",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
         alignItems: "center",
       }}
     >
