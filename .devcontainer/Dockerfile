@@ -7,7 +7,11 @@ RUN apt update && apt install -y \
     htop \
     jq \
     gcc \
-    make
+    make \
+    python3 \
+    python3-pip
+
+RUN pip3 install ginza ja_ginza
 
 RUN curl -fsSL https://get.docker.com | sh
 

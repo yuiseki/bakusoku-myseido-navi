@@ -21,6 +21,10 @@ fetch_all_supports:
 public/supports.json:
 	jq -s '.[0].items=([.[].items]|flatten)|.[0]' tmp/supports/*.json > public/supports.json
 
+tmp/words.txt:
+	jq -r '[.items[] | .summary][]' public/supports.json | \
+	ginzame | grep 普通名詞 | cut -f 1 > tmp/words.txt
+
 public/categories/life_stage_categories.json: public/supports.json
 	jq '[.items[] | .life_stage_categories[]] | unique' public/supports.json > public/categories/life_stage_categories.json
 
