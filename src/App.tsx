@@ -97,11 +97,11 @@ function App() {
         minHeight: "110vh",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "flexStart",
+        justifyContent: "center",
         alignItems: "center",
       }}
     >
-      <h1>爆速マイ制度ナビ</h1>
+      <h2>爆速マイ制度ナビ</h2>
       <div
         style={{
           justifyContent: "center",
@@ -119,7 +119,7 @@ function App() {
           }}
         />
       </div>
-      <h3>制度ガチャ</h3>
+      <h3>制度検索ガチャ</h3>
       <div
         style={{
           justifyContent: "center",
@@ -133,11 +133,11 @@ function App() {
         {wordsData &&
           wordsData
             .sort(() => Math.random() - 0.5)
-            .slice(0, 12)
+            .slice(0, 8)
             .map((word: string) => {
               return (
                 <button
-                  style={{ height: "2em", lineHeight: "2em" }}
+                  style={{ height: "3.4em", lineHeight: "1.4em" }}
                   value={word}
                   onClick={(event) => {
                     setDebouncedQuery(event.currentTarget.value);
@@ -157,7 +157,13 @@ function App() {
       >
         <h3>{supports && supports.length + "件の制度を爆速で検索"}</h3>
       </div>
-      <div style={{ width: "100%", overflowWrap: "break-word" }}>
+      <div
+        style={{
+          justifyContent: "center",
+          width: "100%",
+          overflowWrap: "break-word",
+        }}
+      >
         {supports &&
           supports.map((support) => {
             return (
@@ -165,7 +171,7 @@ function App() {
                 key={support.id}
                 style={{
                   border: "1px solid black",
-                  margin: "20px 5px",
+                  margin: "5px",
                   padding: "10px",
                 }}
               >
@@ -175,23 +181,12 @@ function App() {
                     textToHighlight={support.title}
                   />
                 </h2>
-                {support.competent_authorities.map((auth: any) => {
-                  return (
-                    <h3>
-                      <Highlighter
-                        searchWords={searchWords}
-                        textToHighlight={auth.name}
-                      />
-                    </h3>
-                  );
-                })}
-                <h3>概要</h3>
-                <h4>
+                <h3>
                   <Highlighter
                     searchWords={searchWords}
                     textToHighlight={support.summary}
                   />
-                </h4>
+                </h3>
                 <h3>対象</h3>
                 <div>
                   <ReactMarkdown
@@ -238,6 +233,16 @@ function App() {
                     </div>
                   </>
                 )}
+                {support.competent_authorities.map((auth: any) => {
+                  return (
+                    <h3>
+                      <Highlighter
+                        searchWords={searchWords}
+                        textToHighlight={auth.name}
+                      />
+                    </h3>
+                  );
+                })}
                 {support.governing_law && support.governing_law.length > 0 && (
                   <>
                     <h3>根拠法令</h3>
