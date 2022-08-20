@@ -3,6 +3,8 @@ import useSWR from "swr";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
+import Highlighter from "react-highlight-words";
+import { findAll } from "highlight-words-core";
 
 import { SearchQueryInput } from "./components/SearchQueryInput";
 import { useDebounce } from "./hooks/debounce";
@@ -19,12 +21,32 @@ const categories = [
   "target_categories",
 ];
 
+const highlightedText = (searchWords: string[], textToHighlight: string) => {
+  const chunks = findAll({
+    searchWords,
+    textToHighlight,
+  });
+  const highlightedText = chunks
+    .map((chunk) => {
+      const { end, highlight, start } = chunk;
+      const text = textToHighlight.substr(start, end - start);
+      if (highlight) {
+        return `<mark>${text}</mark>`;
+      } else {
+        return text;
+      }
+    })
+    .join("");
+  return highlightedText;
+};
+
 function App() {
   const { data } = useSWR("/supports.json", fetcher);
   const [supports, setSupports] = useState<any[] | undefined>(undefined);
 
   const debounce = useDebounce(200);
   const [debouncedQuery, setDebouncedQuery] = useState("");
+  const [searchWords, setSearchWords] = useState<string[]>([]);
 
   useEffect(() => {
     if (!data) {
@@ -37,13 +59,13 @@ function App() {
       support.all_categories = [...new Set(cats)];
       return support;
     });
-    if (!debouncedQuery || debouncedQuery.length === 0) {
+    const newSearchWords = debouncedQuery.split(/[\x20\u3000]+/);
+    if (!newSearchWords || newSearchWords.length === 0) {
       setSupports(newSupports);
       return;
     }
     const filteredSupports = newSupports.filter((support: any) => {
-      return debouncedQuery
-        .split(/[\x20\u3000]+/)
+      return newSearchWords
         .map((q) => {
           return (
             q.length === 0 ||
@@ -60,6 +82,7 @@ function App() {
         .every((v) => v === true);
     });
     setSupports(filteredSupports);
+    setSearchWords(newSearchWords);
   }, [data, debouncedQuery]);
 
   return (
@@ -113,16 +136,33 @@ function App() {
                   padding: "10px",
                 }}
               >
-                <h2>{support.title}</h2>
+                <h2>
+                  <Highlighter
+                    searchWords={searchWords}
+                    textToHighlight={support.title}
+                  />
+                </h2>
                 {support.competent_authorities.map((auth: any) => {
-                  return <h3>{auth.name}</h3>;
+                  return (
+                    <h3>
+                      <Highlighter
+                        searchWords={searchWords}
+                        textToHighlight={auth.name}
+                      />
+                    </h3>
+                  );
                 })}
                 <h3>概要</h3>
-                <p>{support.summary}</p>
+                <h4>
+                  <Highlighter
+                    searchWords={searchWords}
+                    textToHighlight={support.summary}
+                  />
+                </h4>
                 <h3>対象</h3>
                 <div>
                   <ReactMarkdown
-                    children={support.target}
+                    children={highlightedText(searchWords, support.target)}
                     remarkPlugins={[remarkGfm]}
                     rehypePlugins={[rehypeRaw]}
                   />
@@ -130,7 +170,7 @@ function App() {
                 <h3>内容</h3>
                 <div>
                   <ReactMarkdown
-                    children={support.body}
+                    children={highlightedText(searchWords, support.body)}
                     remarkPlugins={[remarkGfm]}
                     rehypePlugins={[rehypeRaw]}
                   />
@@ -140,7 +180,10 @@ function App() {
                     <h3>問い合わせ先</h3>
                     <div>
                       <ReactMarkdown
-                        children={support.inquiry.replace(/\n/gi, "\r\n  ")}
+                        children={highlightedText(
+                          searchWords,
+                          support.inquiry.replace(/\n/gi, "\r\n  ")
+                        )}
                         remarkPlugins={[remarkGfm]}
                         rehypePlugins={[rehypeRaw]}
                       />
@@ -152,7 +195,10 @@ function App() {
                     <h3>利用方法</h3>
                     <div>
                       <ReactMarkdown
-                        children={support.usage.replace(/\n/gi, "\r\n  ")}
+                        children={highlightedText(
+                          searchWords,
+                          support.usage.replace(/\n/gi, "\r\n  ")
+                        )}
                         remarkPlugins={[remarkGfm]}
                         rehypePlugins={[rehypeRaw]}
                       />
@@ -162,7 +208,12 @@ function App() {
                 {support.governing_law && support.governing_law.length > 0 && (
                   <>
                     <h3>根拠法令</h3>
-                    <p>{support.governing_law}</p>
+                    <p>
+                      <Highlighter
+                        searchWords={searchWords}
+                        textToHighlight={support.governing_law}
+                      />
+                    </p>
                   </>
                 )}
                 {support.catalogs && support.catalogs.length > 0 && (
@@ -170,12 +221,22 @@ function App() {
                     <h3>収録制度集</h3>
                     <div>
                       {support.catalogs.map((catalog: any) => {
-                        return <p>{catalog.name}</p>;
+                        return (
+                          <p>
+                            <Highlighter
+                              searchWords={searchWords}
+                              textToHighlight={catalog.name}
+                            />
+                          </p>
+                        );
                       })}
                     </div>
                   </>
                 )}
-                {support.all_categories.join(", ")}
+                <Highlighter
+                  searchWords={searchWords}
+                  textToHighlight={support.all_categories.join(", ")}
+                />
               </div>
             );
           })}
