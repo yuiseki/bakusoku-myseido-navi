@@ -19,6 +19,7 @@ const categories = [
   "situation_categories",
   "support_categories",
   "target_categories",
+  "purpose_categories",
 ];
 
 const highlightedText = (searchWords: string[], textToHighlight: string) => {
@@ -73,10 +74,13 @@ function App() {
             support.summary.includes(q) ||
             support.target.includes(q) ||
             support.body.includes(q) ||
-            support.governing_law.includes(q) ||
             support.inquiry.includes(q) ||
-            support.all_categories.includes(q) ||
-            support.competent_authorities.includes(q)
+            support.usage.includes(q) ||
+            support.governing_law.includes(q) ||
+            support.all_categories.some((cat: string) => cat.includes(q)) ||
+            support.competent_authorities.some((auth: any) =>
+              auth.name.includes(q)
+            )
           );
         })
         .every((v) => v === true);
