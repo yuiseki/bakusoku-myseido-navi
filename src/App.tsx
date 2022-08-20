@@ -53,7 +53,8 @@ function App() {
             support.body.includes(q) ||
             support.governing_law.includes(q) ||
             support.inquiry.includes(q) ||
-            support.all_categories.includes(q)
+            support.all_categories.includes(q) ||
+            support.competent_authorities.includes(q)
           );
         })
         .every((v) => v === true);
@@ -64,7 +65,6 @@ function App() {
   return (
     <div
       style={{
-        marginTop: "30px",
         width: "100%",
         minHeight: "110vh",
         display: "flex",
@@ -79,7 +79,7 @@ function App() {
           justifyContent: "center",
           width: "100%",
           display: "flex",
-          marginBottom: "30px",
+          marginBottom: "10px",
         }}
       >
         <SearchQueryInput
@@ -95,7 +95,7 @@ function App() {
           justifyContent: "center",
           width: "100%",
           display: "flex",
-          marginBottom: "30px",
+          marginBottom: "10px",
         }}
       >
         {supports && supports.length + "件の制度を爆速で検索"}
@@ -103,6 +103,7 @@ function App() {
       <div style={{ width: "100%", overflowWrap: "break-word" }}>
         {supports &&
           supports.map((support) => {
+            console.log(support);
             return (
               <div
                 key={support.id}
@@ -113,6 +114,9 @@ function App() {
                 }}
               >
                 <h2>{support.title}</h2>
+                {support.competent_authorities.map((auth: any) => {
+                  return <h3>{auth.name}</h3>;
+                })}
                 <h3>概要</h3>
                 <p>{support.summary}</p>
                 <h3>対象</h3>
@@ -131,22 +135,6 @@ function App() {
                     rehypePlugins={[rehypeRaw]}
                   />
                 </div>
-                {support.governing_law && support.governing_law.length > 0 && (
-                  <>
-                    <h3>根拠法令</h3>
-                    <p>{support.governing_law}</p>
-                  </>
-                )}
-                {support.catalogs && support.catalogs.length > 0 && (
-                  <>
-                    <h3>収録制度集</h3>
-                    <div>
-                      {support.catalogs.map((catalog: any) => {
-                        return <p>{catalog.name}</p>;
-                      })}
-                    </div>
-                  </>
-                )}
                 {support.inquiry && support.inquiry.length > 0 && (
                   <>
                     <h3>問い合わせ先</h3>
@@ -168,6 +156,22 @@ function App() {
                         remarkPlugins={[remarkGfm]}
                         rehypePlugins={[rehypeRaw]}
                       />
+                    </div>
+                  </>
+                )}
+                {support.governing_law && support.governing_law.length > 0 && (
+                  <>
+                    <h3>根拠法令</h3>
+                    <p>{support.governing_law}</p>
+                  </>
+                )}
+                {support.catalogs && support.catalogs.length > 0 && (
+                  <>
+                    <h3>収録制度集</h3>
+                    <div>
+                      {support.catalogs.map((catalog: any) => {
+                        return <p>{catalog.name}</p>;
+                      })}
                     </div>
                   </>
                 )}
