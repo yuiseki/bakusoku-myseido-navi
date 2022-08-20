@@ -63,7 +63,7 @@ function App() {
     });
     const newSearchWords = debouncedQuery.split(/[\x20\u3000]+/);
     if (!newSearchWords || newSearchWords.length === 0) {
-      setSupports(newSupports);
+      setSupports(newSupports.sort(() => Math.random() - 0.5));
       return;
     }
     const filteredSupports = newSupports.filter((support: any) => {
