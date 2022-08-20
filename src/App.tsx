@@ -82,7 +82,7 @@ function App() {
       >
         {supports && supports.length + "件の制度を爆速で検索"}
       </div>
-      <div>
+      <div style={{ width: '100%', overflowWrap: 'break-word',}}>
         {supports &&
           supports.map((support) => {
             return (
