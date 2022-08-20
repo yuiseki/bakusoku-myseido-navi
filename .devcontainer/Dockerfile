@@ -11,7 +11,7 @@ RUN apt update && apt install -y \
     python3 \
     python3-pip
 
-RUN pip3 install ginza ja_ginza
+RUN pip3 install ginza ja-ginza ja-ginza-electra
 
 RUN curl -fsSL https://get.docker.com | sh
 

@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export const SearchQueryInput: React.FC<{
+  inputValue?: string;
   onChange: (value: string) => void;
-}> = ({ onChange }) => {
-  const [value, setValue] = useState("");
+}> = ({ inputValue, onChange }) => {
+  const [value, setValue] = useState(inputValue);
+
+  useEffect(() => {
+    setValue(inputValue);
+  }, [inputValue]);
 
   return (
     <input

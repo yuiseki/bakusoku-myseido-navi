@@ -42,7 +42,8 @@ const highlightedText = (searchWords: string[], textToHighlight: string) => {
 };
 
 function App() {
-  const { data } = useSWR("/supports.json", fetcher);
+  const { data: supportsData } = useSWR("/supports.json", fetcher);
+  const { data: wordsData } = useSWR("/words.json", fetcher);
   const [supports, setSupports] = useState<any[] | undefined>(undefined);
 
   const debounce = useDebounce(200);
@@ -50,10 +51,10 @@ function App() {
   const [searchWords, setSearchWords] = useState<string[]>([]);
 
   useEffect(() => {
-    if (!data) {
+    if (!supportsData) {
       return;
     }
-    const newSupports = data.items.map((support: any) => {
+    const newSupports = supportsData.items.map((support: any) => {
       const cats = categories
         .map((cat) => support[cat].map((c: any) => c.name))
         .flat();
@@ -87,7 +88,7 @@ function App() {
     });
     setSupports(filteredSupports);
     setSearchWords(newSearchWords);
-  }, [data, debouncedQuery]);
+  }, [supportsData, debouncedQuery]);
 
   return (
     <div
@@ -110,6 +111,7 @@ function App() {
         }}
       >
         <SearchQueryInput
+          inputValue={debouncedQuery}
           onChange={(value) => {
             debounce(() => {
               setDebouncedQuery(value);
@@ -117,20 +119,47 @@ function App() {
           }}
         />
       </div>
+      <h3>制度ガチャ</h3>
+      <div
+        style={{
+          justifyContent: "center",
+          width: "100%",
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr 1fr 1fr",
+          gap: "10px",
+          marginBottom: "10px",
+        }}
+      >
+        {wordsData &&
+          wordsData
+            .sort(() => Math.random() - 0.5)
+            .slice(0, 12)
+            .map((word: string) => {
+              return (
+                <button
+                  style={{ height: "2em", lineHeight: "2em" }}
+                  value={word}
+                  onClick={(event) => {
+                    setDebouncedQuery(event.currentTarget.value);
+                  }}
+                >
+                  {word}
+                </button>
+              );
+            })}
+      </div>
       <div
         style={{
           justifyContent: "center",
           width: "100%",
           display: "flex",
-          marginBottom: "10px",
         }}
       >
-        {supports && supports.length + "件の制度を爆速で検索"}
+        <h3>{supports && supports.length + "件の制度を爆速で検索"}</h3>
       </div>
       <div style={{ width: "100%", overflowWrap: "break-word" }}>
         {supports &&
           supports.map((support) => {
-            console.log(support);
             return (
               <div
                 key={support.id}
