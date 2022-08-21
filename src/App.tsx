@@ -32,9 +32,18 @@ function App() {
     "/categories/target_categories.json",
     fetcher
   );
+  const { data: requestsData } = useSWR(
+    "/categories/request_categories.json",
+    fetcher
+  );
+  const { data: situationsData } = useSWR(
+    "/categories/situation_categories.json",
+    fetcher
+  );
 
   const [supports, setSupports] = useState<any[] | undefined>(undefined);
-  const [users, setUsers] = useState<string[] | undefined>(undefined);
+  const [wordHints, setWordHints] = useState<string[] | undefined>(undefined);
+  const [questions, setQuestions] = useState<string[] | undefined>(undefined);
 
   const debounce = useDebounce(200);
   const [debouncedQuery, setDebouncedQuery] = useState("");
@@ -50,8 +59,30 @@ function App() {
       });
     });
     const newUsersUniq = [...new Set(newUsers.flat())];
-    setUsers(newUsersUniq);
+    const newWords = wordsData;
+    const newWordHints = [...new Set([...newUsersUniq, ...newWords])];
+    setWordHints(newWordHints);
   }, [targetsData]);
+
+  useEffect(() => {
+    if (!requestsData || !situationsData) {
+      return;
+    }
+    const newRequests: string[] = requestsData.map((target: any) => {
+      return target.sub_categories.map((cat: any) => {
+        return target.name + " " + cat.name;
+      });
+    });
+    const newSituations: string[] = situationsData.map((target: any) => {
+      return target.sub_categories.map((cat: any) => {
+        return target.name + " " + cat.name;
+      });
+    });
+    const newQuestionsUniq = [
+      ...new Set([...newRequests.flat(), ...newSituations.flat()]),
+    ];
+    setQuestions(newQuestionsUniq);
+  }, [requestsData, situationsData]);
 
   useEffect(() => {
     if (!supportsData) {
@@ -132,53 +163,62 @@ function App() {
           }}
         />
       </div>
-
-      <h3>あてはまる言葉をクリック</h3>
+      <h3>やりたいことをクリック</h3>
       <div
         style={{
           justifyContent: "center",
           width: "100%",
+          height: "140px",
+          overflow: "hidden scroll",
           display: "grid",
-          gridTemplateColumns: "1fr 1fr 1fr 1fr",
-          gap: "10px",
+          gridTemplateColumns: "1fr",
+          gap: "5px",
           marginBottom: "10px",
         }}
       >
-        {users &&
-          users.map((user: any) => {
-            return (
-              <button
-                style={{ height: "3.4em", lineHeight: "1.4em" }}
-                key={user}
-                value={user}
-                onClick={(event) => {
-                  setDebouncedQuery(event.currentTarget.value);
-                }}
-              >
-                {user}
-              </button>
-            );
-          })}
+        {questions &&
+          questions
+            .sort(() => Math.random() - 0.5)
+            .map((request: any) => {
+              return (
+                <button
+                  style={{ height: "3em", lineHeight: "1.4em" }}
+                  key={request}
+                  value={request}
+                  onClick={(event) => {
+                    setDebouncedQuery(event.currentTarget.value);
+                  }}
+                >
+                  {request}
+                </button>
+              );
+            })}
       </div>
       <h3>気になる言葉をクリック</h3>
       <div
         style={{
-          justifyContent: "center",
           width: "100%",
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr 1fr 1fr",
-          gap: "10px",
+          height: "140px",
+          overflow: "hidden scroll",
+          display: "flex",
+          flexWrap: "wrap",
+          alignItems: "start",
+          justifyContent: "space-between",
           marginBottom: "10px",
         }}
       >
-        {wordsData &&
-          wordsData
+        {wordHints &&
+          wordHints
             .sort(() => Math.random() - 0.5)
-            .slice(0, 8)
             .map((word: string) => {
               return (
                 <button
-                  style={{ height: "3.4em", lineHeight: "1.4em" }}
+                  style={{
+                    display: "block",
+                    margin: "5px",
+                    height: "3.4em",
+                    lineHeight: "1.4em",
+                  }}
                   key={word}
                   value={word}
                   onClick={(event) => {
@@ -197,7 +237,16 @@ function App() {
           display: "flex",
         }}
       >
-        <h3>{supports && supports.length + "件の制度を爆速で検索"}</h3>
+        <h3>
+          {debouncedQuery.length === 0 ? (
+            <>{supports && supports.length + "件の制度を爆速で検索"}</>
+          ) : (
+            <mark>
+              {supportsData && supportsData.items.length + "件中 "}
+              {supports && supports.length + "件の制度を爆速で検索"}
+            </mark>
+          )}
+        </h3>
       </div>
       <div
         style={{

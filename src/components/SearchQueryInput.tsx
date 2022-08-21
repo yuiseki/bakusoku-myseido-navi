@@ -13,6 +13,7 @@ export const SearchQueryInput: React.FC<{
   return (
     <form
       style={{
+        width: "100%",
         display: "flex",
         backgroundColor: "#f6f5f3",
         border: "none",
@@ -20,7 +21,7 @@ export const SearchQueryInput: React.FC<{
     >
       <input
         style={{
-          fontSize: "1.5em",
+          fontSize: "1em",
           padding: "10px",
           flexGrow: "1",
           backgroundColor: "#f6f5f3",
