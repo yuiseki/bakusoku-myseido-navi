@@ -66,7 +66,7 @@ function App() {
           support[cat].map((c: any) => c.sub_categories.map((s: any) => s.name))
         )
         .flat();
-      const cats = [...mainCats, ...subCats, ...support.keywords];
+      const cats = [...mainCats, ...subCats, ...support.keywords].flat();
       support.all_categories = [...new Set(cats)];
       return support;
     });
@@ -214,6 +214,7 @@ function App() {
       >
         {supports &&
           supports.map((support) => {
+            console.log(support);
             return (
               <div
                 key={support.number}
