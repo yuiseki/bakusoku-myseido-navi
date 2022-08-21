@@ -70,11 +70,12 @@ function App() {
       support.all_categories = [...new Set(cats)];
       return support;
     });
-    const newSearchWords = debouncedQuery.split(/[\x20\u3000]+/);
-    if (!newSearchWords || newSearchWords.length === 0) {
-      setSupports(newSupports.sort(() => Math.random() - 0.5));
+    if (debouncedQuery.length === 0) {
+      setSupports(newSupports);
+      setSearchWords([]);
       return;
     }
+    const newSearchWords = debouncedQuery.split(/[\x20\u3000]+/);
     const filteredSupports = newSupports.filter((support: any) => {
       return newSearchWords
         .map((q) => {
