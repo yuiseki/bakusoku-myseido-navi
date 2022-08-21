@@ -155,6 +155,7 @@ function App() {
             return (
               <button
                 style={{ height: "3.4em", lineHeight: "1.4em" }}
+                key={user}
                 value={user}
                 onClick={(event) => {
                   appendQuery(event.currentTarget.value);
@@ -184,6 +185,7 @@ function App() {
               return (
                 <button
                   style={{ height: "3.4em", lineHeight: "1.4em" }}
+                  key={word}
                   value={word}
                   onClick={(event) => {
                     appendQuery(event.currentTarget.value);
@@ -214,7 +216,7 @@ function App() {
           supports.map((support) => {
             return (
               <div
-                key={support.id}
+                key={support.number}
                 style={{
                   border: "1px solid black",
                   margin: "5px",
@@ -230,6 +232,7 @@ function App() {
                   {support.competent_authorities.map((auth: any) => {
                     return (
                       <Highlighter
+                        key={auth.name}
                         searchWords={searchWords}
                         textToHighlight={auth.name}
                       />
@@ -305,7 +308,7 @@ function App() {
                     <div>
                       {support.catalogs.map((catalog: any) => {
                         return (
-                          <p>
+                          <p key={catalog.name}>
                             <Highlighter
                               searchWords={searchWords}
                               textToHighlight={catalog.name}
@@ -321,6 +324,7 @@ function App() {
                   searchWords={searchWords}
                   textToHighlight={support.all_categories.join(", ")}
                 />
+                <p>管理番号：{support.number}</p>
               </div>
             );
           })}
