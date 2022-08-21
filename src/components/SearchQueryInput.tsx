@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 export const SearchQueryInput: React.FC<{
   inputValue?: string;
@@ -11,22 +11,46 @@ export const SearchQueryInput: React.FC<{
   }, [inputValue]);
 
   return (
-    <input
-      type="text"
-      placeholder={"制度を爆速で検索..."}
+    <form
       style={{
+        display: "flex",
         maxWidth: "90%",
         minWidth: "30%",
-        fontSize: "1.5em",
-        padding: "10px",
         backgroundColor: "#f6f5f3",
         border: "none",
       }}
-      value={value}
-      onChange={(e) => {
-        setValue(e.target.value);
-        onChange(e.target.value);
-      }}
-    />
+    >
+      <input
+        style={{
+          fontSize: "1.5em",
+          padding: "10px",
+          flexGrow: "1",
+          backgroundColor: "#f6f5f3",
+          border: "none",
+        }}
+        type="text"
+        placeholder={"制度を爆速で検索..."}
+        value={value}
+        onChange={(e) => {
+          setValue(e.target.value);
+          onChange(e.target.value);
+        }}
+      />
+      <input
+        style={{
+          fontSize: "1.4em",
+          minWidth: "40px",
+          padding: "10px",
+          backgroundColor: "#f6f5f3",
+          border: "none",
+        }}
+        type="reset"
+        value="✕"
+        onClick={() => {
+          setValue("");
+          onChange("");
+        }}
+      />
+    </form>
   );
 };
