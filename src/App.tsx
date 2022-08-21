@@ -60,7 +60,9 @@ function App() {
     });
     const newUsersUniq = [...new Set(newUsers.flat())];
     const newWords = wordsData;
-    const newWordHints = [...new Set([...newUsersUniq, ...newWords])];
+    const newWordHints = [...new Set([...newUsersUniq, ...newWords])].sort(
+      () => Math.random() - 0.5
+    );
     setWordHints(newWordHints);
   }, [targetsData]);
 
@@ -80,7 +82,7 @@ function App() {
     });
     const newQuestionsUniq = [
       ...new Set([...newRequests.flat(), ...newSituations.flat()]),
-    ];
+    ].sort(() => Math.random() - 0.5);
     setQuestions(newQuestionsUniq);
   }, [requestsData, situationsData]);
 
@@ -163,7 +165,7 @@ function App() {
           }}
         />
       </div>
-      <h3>やりたいことをクリック</h3>
+      <h3>よくあるお悩み</h3>
       <div
         style={{
           justifyContent: "center",
@@ -177,22 +179,20 @@ function App() {
         }}
       >
         {questions &&
-          questions
-            .sort(() => Math.random() - 0.5)
-            .map((request: any) => {
-              return (
-                <button
-                  style={{ height: "3em", lineHeight: "1.4em" }}
-                  key={request}
-                  value={request}
-                  onClick={(event) => {
-                    setDebouncedQuery(event.currentTarget.value);
-                  }}
-                >
-                  {request}
-                </button>
-              );
-            })}
+          questions.map((request: any) => {
+            return (
+              <button
+                style={{ height: "3em", lineHeight: "1.4em" }}
+                key={request}
+                value={request}
+                onClick={(event) => {
+                  setDebouncedQuery(event.currentTarget.value);
+                }}
+              >
+                {request}
+              </button>
+            );
+          })}
       </div>
       <h3>気になる言葉をクリック</h3>
       <div
@@ -208,27 +208,25 @@ function App() {
         }}
       >
         {wordHints &&
-          wordHints
-            .sort(() => Math.random() - 0.5)
-            .map((word: string) => {
-              return (
-                <button
-                  style={{
-                    display: "block",
-                    margin: "5px",
-                    height: "3.4em",
-                    lineHeight: "1.4em",
-                  }}
-                  key={word}
-                  value={word}
-                  onClick={(event) => {
-                    setDebouncedQuery(event.currentTarget.value);
-                  }}
-                >
-                  {word}
-                </button>
-              );
-            })}
+          wordHints.map((word: string) => {
+            return (
+              <button
+                style={{
+                  display: "block",
+                  margin: "5px",
+                  height: "3.4em",
+                  lineHeight: "1.4em",
+                }}
+                key={word}
+                value={word}
+                onClick={(event) => {
+                  setDebouncedQuery(event.currentTarget.value);
+                }}
+              >
+                {word}
+              </button>
+            );
+          })}
       </div>
       <div
         style={{
@@ -239,7 +237,7 @@ function App() {
       >
         <h3>
           {debouncedQuery.length === 0 ? (
-            <>{supports && supports.length + "件の制度を爆速で検索"}</>
+            <>{supports && supports.length + "件の制度を爆速で検索..."}</>
           ) : (
             <mark>
               {supportsData && supportsData.items.length + "件中 "}
