@@ -2,13 +2,15 @@
 all: \
 	fetch_all_supports \
 	public/supports.json \
+	public/words.json \
 	public/categories/life_stage_categories.json \
 	public/categories/personal_service_categories.json \
 	public/categories/personal_purpose_categories.json \
 	public/categories/support_categories.json \
 	public/categories/situation_categories.json \
 	public/categories/request_categories.json \
-	public/categories/target_categories.json
+	public/categories/target_categories.json \
+	public/categories/purpose_categories.json
 
 clean:
 	rm ./tmp/supports/*
@@ -48,6 +50,9 @@ public/categories/request_categories.json: public/supports.json
 
 public/categories/target_categories.json: public/supports.json
 	jq '[.items[] | .target_categories[]] | unique' public/supports.json > public/categories/target_categories.json
+
+public/categories/purpose_categories.json: public/supports.json
+	jq '[.items[] | .purpose_categories[]] | unique' public/supports.json > public/categories/purpose_categories.json
 
 #public/industry_categories.json:
 #public/stage_categories:
