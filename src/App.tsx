@@ -22,7 +22,6 @@ const categories = [
   "purpose_categories",
 ];
 
-
 function App() {
   const { data: supportsData } = useSWR("/supports.json", fetcher);
   const { data: wordsData } = useSWR("/words.json", fetcher);
@@ -161,6 +160,15 @@ function App() {
                     searchWords={searchWords}
                     textToHighlight={support.title}
                   />
+                  ,{" "}
+                  {support.competent_authorities.map((auth: any) => {
+                    return (
+                      <Highlighter
+                        searchWords={searchWords}
+                        textToHighlight={auth.name}
+                      />
+                    );
+                  })}
                 </h2>
                 <h3>
                   <Highlighter
@@ -214,16 +222,6 @@ function App() {
                     </div>
                   </>
                 )}
-                {support.competent_authorities.map((auth: any) => {
-                  return (
-                    <h3>
-                      <Highlighter
-                        searchWords={searchWords}
-                        textToHighlight={auth.name}
-                      />
-                    </h3>
-                  );
-                })}
                 {support.governing_law && support.governing_law.length > 0 && (
                   <>
                     <h3>根拠法令</h3>
