@@ -28,7 +28,7 @@ export const SearchQueryInput: React.FC<{
           border: "none",
         }}
         type="text"
-        placeholder={"制度を爆速で検索..."}
+        placeholder={"AIが制度を爆速で検索..."}
         value={value}
         onChange={(e) => {
           setValue(e.target.value);

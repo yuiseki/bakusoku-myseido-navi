@@ -147,7 +147,7 @@ function App() {
         alignItems: "center",
       }}
     >
-      <h2>爆速マイ制度ナビ</h2>
+      <h2>爆速AIマイ制度ナビ</h2>
       <div
         style={{
           justifyContent: "center",
@@ -165,7 +165,7 @@ function App() {
           }}
         />
       </div>
-      <h3>よくあるお悩み</h3>
+      <h3>よくある悩みをAIに伝える</h3>
       <div
         style={{
           justifyContent: "center",
@@ -194,7 +194,7 @@ function App() {
             );
           })}
       </div>
-      <h3>気になる言葉をクリック</h3>
+      <h3>気になる言葉をAIに教える</h3>
       <div
         style={{
           width: "100%",
@@ -237,11 +237,11 @@ function App() {
       >
         <h3>
           {debouncedQuery.length === 0 ? (
-            <>{supports && supports.length + "件の制度を爆速で検索..."}</>
+            <>{supports && supports.length + "件の制度をAIが爆速で検索..."}</>
           ) : (
             <mark>
               {supportsData && supportsData.items.length + "件中 "}
-              {supports && supports.length + "件の制度を爆速で検索"}
+              {supports && supports.length + "件の制度をAIが爆速で検索！！"}
             </mark>
           )}
         </h3>
