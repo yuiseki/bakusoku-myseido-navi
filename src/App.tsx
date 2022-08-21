@@ -104,17 +104,6 @@ function App() {
     setSearchWords(newSearchWords);
   }, [supportsData, debouncedQuery]);
 
-  const appendQuery = useCallback(
-    (query: string) => {
-      if (debouncedQuery && debouncedQuery.length > 0) {
-        setDebouncedQuery(debouncedQuery + " " + query);
-      } else {
-        setDebouncedQuery(query);
-      }
-    },
-    [debouncedQuery]
-  );
-
   return (
     <div
       style={{
@@ -163,7 +152,7 @@ function App() {
                 key={user}
                 value={user}
                 onClick={(event) => {
-                  appendQuery(event.currentTarget.value);
+                  setDebouncedQuery(event.currentTarget.value);
                 }}
               >
                 {user}
@@ -193,7 +182,7 @@ function App() {
                   key={word}
                   value={word}
                   onClick={(event) => {
-                    appendQuery(event.currentTarget.value);
+                    setDebouncedQuery(event.currentTarget.value);
                   }}
                 >
                   {word}
