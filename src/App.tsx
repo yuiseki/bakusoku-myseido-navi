@@ -219,6 +219,7 @@ function App() {
                 }}
                 key={word}
                 value={word}
+                disabled={searchWords.includes(word)}
                 onClick={(event) => {
                   setDebouncedQuery(event.currentTarget.value);
                 }}
