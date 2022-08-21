@@ -50,7 +50,7 @@ function App() {
   const [searchWords, setSearchWords] = useState<string[]>([]);
 
   useEffect(() => {
-    if (!targetsData) {
+    if (!targetsData || !wordsData) {
       return;
     }
     const newUsers: string[] = targetsData.map((target: any) => {
@@ -361,25 +361,26 @@ function App() {
                   </>
                 )}
                 <h3>キーワード</h3>
-                {support.all_categories.map((cat: string) => {
-                  return (
-                    <button
-                      style={{
-                        margin: "5px",
-                        height: "3.4em",
-                        lineHeight: "1.4em",
-                      }}
-                      key={cat}
-                      value={cat}
-                      disabled={searchWords.includes(cat)}
-                      onClick={(event) => {
-                        setDebouncedQuery(event.currentTarget.value);
-                      }}
-                    >
-                      {cat}
-                    </button>
-                  );
-                })}
+                {searchWords &&
+                  support.all_categories.map((cat: string) => {
+                    return (
+                      <button
+                        style={{
+                          margin: "5px",
+                          height: "3.4em",
+                          lineHeight: "1.4em",
+                        }}
+                        key={cat}
+                        value={cat}
+                        disabled={searchWords.includes(cat)}
+                        onClick={(event) => {
+                          setDebouncedQuery(event.currentTarget.value);
+                        }}
+                      >
+                        {cat}
+                      </button>
+                    );
+                  })}
                 <p>管理番号：{support.id}</p>
               </div>
             );
