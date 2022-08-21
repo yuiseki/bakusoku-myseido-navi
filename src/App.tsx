@@ -73,7 +73,7 @@ function App() {
         support.all_categories = [...new Set(cats)];
         return support;
       })
-      .sort((a: any, b: any) => a.id - b.id);
+      .sort((a: any, b: any) => parseInt(b.id) - parseInt(a.id));
     if (debouncedQuery.length === 0) {
       setSupports(newSupports.sort(() => Math.random() - 0.5));
       setSearchWords([]);
