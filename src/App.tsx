@@ -57,21 +57,25 @@ function App() {
     if (!supportsData) {
       return;
     }
-    const newSupports = supportsData.items.map((support: any) => {
-      const mainCats = categories
-        .map((cat) => support[cat].map((c: any) => c.name))
-        .flat();
-      const subCats = subCategories
-        .map((cat) =>
-          support[cat].map((c: any) => c.sub_categories.map((s: any) => s.name))
-        )
-        .flat();
-      const cats = [...mainCats, ...subCats, ...support.keywords].flat();
-      support.all_categories = [...new Set(cats)];
-      return support;
-    });
+    const newSupports = supportsData.items
+      .map((support: any) => {
+        const mainCats = categories
+          .map((cat) => support[cat].map((c: any) => c.name))
+          .flat();
+        const subCats = subCategories
+          .map((cat) =>
+            support[cat].map((c: any) =>
+              c.sub_categories.map((s: any) => s.name)
+            )
+          )
+          .flat();
+        const cats = [...mainCats, ...subCats, ...support.keywords].flat();
+        support.all_categories = [...new Set(cats)];
+        return support;
+      })
+      .sort((a: any, b: any) => a.id - b.id);
     if (debouncedQuery.length === 0) {
-      setSupports(newSupports);
+      setSupports(newSupports.sort(() => Math.random() - 0.5));
       setSearchWords([]);
       return;
     }
@@ -214,10 +218,9 @@ function App() {
       >
         {supports &&
           supports.map((support) => {
-            console.log(support);
             return (
               <div
-                key={support.number}
+                key={support.id}
                 style={{
                   border: "1px solid black",
                   margin: "5px",
@@ -325,7 +328,7 @@ function App() {
                   searchWords={searchWords}
                   textToHighlight={support.all_categories.join(", ")}
                 />
-                <p>管理番号：{support.number}</p>
+                <p>管理番号：{support.id}</p>
               </div>
             );
           })}
