@@ -143,6 +143,7 @@ function App() {
           }}
         />
       </div>
+
       <h3>あてはまる言葉をクリック</h3>
       <div
         style={{
@@ -170,7 +171,7 @@ function App() {
             );
           })}
       </div>
-      <h3>制度検索ガチャ</h3>
+      <h3>気になる言葉をクリック</h3>
       <div
         style={{
           justifyContent: "center",

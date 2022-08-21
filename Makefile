@@ -30,7 +30,7 @@ tmp/words.txt:
 	jq -r '[.items[] | .target][]' public/supports.json | ginzame -s C | grep 名詞 | cut -f 1 >> tmp/words.txt
 
 public/words.json: tmp/words.txt
-	cat tmp/words.txt | sort | uniq | awk '{ print length, $$0 }' | sort -n -s -r | cut -d" " -f2- | sed '/[^a-zA-Z0-9]/!d' | head -570 | jq -nR '[inputs | select(length>0)]' > public/words.json
+	cat tmp/words.txt | sort | uniq -c | sort -nr | awk '{ print $$2 }' | sed '/[^a-zA-Z0-9]/!d' | head -n500 | jq -nR '[inputs | select(length>1)]' > public/words.json
 
 public/categories/life_stage_categories.json: public/supports.json
 	jq '[.items[] | .life_stage_categories[]] | unique' public/supports.json > public/categories/life_stage_categories.json
