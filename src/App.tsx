@@ -15,30 +15,58 @@ const categories = [
   "life_stage_categories",
   "personal_purpose_categories",
   "personal_service_categories",
+  "support_categories",
+  "purpose_categories",
+];
+
+const subCategories = [
   "request_categories",
   "situation_categories",
-  "support_categories",
   "target_categories",
-  "purpose_categories",
 ];
 
 function App() {
   const { data: supportsData } = useSWR("/supports.json", fetcher);
   const { data: wordsData } = useSWR("/words.json", fetcher);
+  const { data: targetsData } = useSWR(
+    "/categories/target_categories.json",
+    fetcher
+  );
+
   const [supports, setSupports] = useState<any[] | undefined>(undefined);
+  const [users, setUsers] = useState<string[] | undefined>(undefined);
 
   const debounce = useDebounce(200);
   const [debouncedQuery, setDebouncedQuery] = useState("");
   const [searchWords, setSearchWords] = useState<string[]>([]);
 
   useEffect(() => {
+    if (!targetsData) {
+      return;
+    }
+    const newUsers: string[] = targetsData.map((target: any) => {
+      return target.sub_categories.map((cat: any) => {
+        return cat.name;
+      });
+    });
+    const newUsersUniq = [...new Set(newUsers.flat())];
+    setUsers(newUsersUniq);
+  }, [targetsData]);
+
+  useEffect(() => {
     if (!supportsData) {
       return;
     }
     const newSupports = supportsData.items.map((support: any) => {
-      const cats = categories
+      const mainCats = categories
         .map((cat) => support[cat].map((c: any) => c.name))
         .flat();
+      const subCats = subCategories
+        .map((cat) =>
+          support[cat].map((c: any) => c.sub_categories.map((s: any) => s.name))
+        )
+        .flat();
+      const cats = [...mainCats, ...subCats, ...support.keywords];
       support.all_categories = [...new Set(cats)];
       return support;
     });
@@ -98,6 +126,32 @@ function App() {
             });
           }}
         />
+      </div>
+      <h3>あてはまる言葉は？</h3>
+      <div
+        style={{
+          justifyContent: "center",
+          width: "100%",
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr 1fr 1fr",
+          gap: "10px",
+          marginBottom: "10px",
+        }}
+      >
+        {users &&
+          users.map((user: any) => {
+            return (
+              <button
+                style={{ height: "3.4em", lineHeight: "1.4em" }}
+                value={user}
+                onClick={(event) => {
+                  setDebouncedQuery(event.currentTarget.value);
+                }}
+              >
+                {user}
+              </button>
+            );
+          })}
       </div>
       <h3>制度検索ガチャ</h3>
       <div
@@ -250,6 +304,7 @@ function App() {
                     </div>
                   </>
                 )}
+                <h3>キーワード</h3>
                 <Highlighter
                   searchWords={searchWords}
                   textToHighlight={support.all_categories.join(", ")}
