@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import useSWR from "swr";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -99,6 +99,17 @@ function App() {
     setSearchWords(newSearchWords);
   }, [supportsData, debouncedQuery]);
 
+  const appendQuery = useCallback(
+    (query: string) => {
+      if (debouncedQuery && debouncedQuery.length > 0) {
+        setDebouncedQuery(debouncedQuery + " " + query);
+      } else {
+        setDebouncedQuery(query);
+      }
+    },
+    [debouncedQuery]
+  );
+
   return (
     <div
       style={{
@@ -127,13 +138,13 @@ function App() {
           }}
         />
       </div>
-      <h3>あてはまる言葉は？</h3>
+      <h3>あてはまる言葉をクリック</h3>
       <div
         style={{
           justifyContent: "center",
           width: "100%",
           display: "grid",
-          gridTemplateColumns: "1fr 1fr 1fr 1fr",
+          gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr 1fr",
           gap: "10px",
           marginBottom: "10px",
         }}
@@ -145,7 +156,7 @@ function App() {
                 style={{ height: "3.4em", lineHeight: "1.4em" }}
                 value={user}
                 onClick={(event) => {
-                  setDebouncedQuery(event.currentTarget.value);
+                  appendQuery(event.currentTarget.value);
                 }}
               >
                 {user}
@@ -174,7 +185,7 @@ function App() {
                   style={{ height: "3.4em", lineHeight: "1.4em" }}
                   value={word}
                   onClick={(event) => {
-                    setDebouncedQuery(event.currentTarget.value);
+                    appendQuery(event.currentTarget.value);
                   }}
                 >
                   {word}
