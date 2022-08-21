@@ -14,8 +14,6 @@ export const SearchQueryInput: React.FC<{
     <form
       style={{
         display: "flex",
-        maxWidth: "90%",
-        minWidth: "30%",
         backgroundColor: "#f6f5f3",
         border: "none",
       }}
