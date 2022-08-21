@@ -4,10 +4,10 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 import Highlighter from "react-highlight-words";
-import { findAll } from "highlight-words-core";
 
 import { SearchQueryInput } from "./components/SearchQueryInput";
 import { useDebounce } from "./hooks/debounce";
+import { highlightText } from "./lib/highlightText";
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 
@@ -22,24 +22,6 @@ const categories = [
   "purpose_categories",
 ];
 
-const highlightedText = (searchWords: string[], textToHighlight: string) => {
-  const chunks = findAll({
-    searchWords,
-    textToHighlight,
-  });
-  const highlightedText = chunks
-    .map((chunk) => {
-      const { end, highlight, start } = chunk;
-      const text = textToHighlight.substr(start, end - start);
-      if (highlight) {
-        return `<mark>${text}</mark>`;
-      } else {
-        return text;
-      }
-    })
-    .join("");
-  return highlightedText;
-};
 
 function App() {
   const { data: supportsData } = useSWR("/supports.json", fetcher);
@@ -189,7 +171,7 @@ function App() {
                 <h3>対象</h3>
                 <div>
                   <ReactMarkdown
-                    children={highlightedText(searchWords, support.target)}
+                    children={highlightText(searchWords, support.target)}
                     remarkPlugins={[remarkGfm]}
                     rehypePlugins={[rehypeRaw]}
                   />
@@ -197,7 +179,7 @@ function App() {
                 <h3>内容</h3>
                 <div>
                   <ReactMarkdown
-                    children={highlightedText(searchWords, support.body)}
+                    children={highlightText(searchWords, support.body)}
                     remarkPlugins={[remarkGfm]}
                     rehypePlugins={[rehypeRaw]}
                   />
@@ -207,7 +189,7 @@ function App() {
                     <h3>問い合わせ先</h3>
                     <div>
                       <ReactMarkdown
-                        children={highlightedText(
+                        children={highlightText(
                           searchWords,
                           support.inquiry.replace(/\n/gi, "\r\n  ")
                         )}
@@ -222,7 +204,7 @@ function App() {
                     <h3>利用方法</h3>
                     <div>
                       <ReactMarkdown
-                        children={highlightedText(
+                        children={highlightText(
                           searchWords,
                           support.usage.replace(/\n/gi, "\r\n  ")
                         )}
