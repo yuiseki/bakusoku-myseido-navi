@@ -184,7 +184,7 @@ function App() {
         {wordsData &&
           wordsData
             .sort(() => Math.random() - 0.5)
-            .slice(0, 12)
+            .slice(0, 8)
             .map((word: string) => {
               return (
                 <button
