@@ -295,72 +295,76 @@ function App() {
                     rehypePlugins={[rehypeRaw]}
                   />
                 </div>
-                <h3>内容</h3>
-                <div>
-                  <ReactMarkdown
-                    children={highlightText(searchWords, support.body)}
-                    remarkPlugins={[remarkGfm]}
-                    rehypePlugins={[rehypeRaw]}
-                  />
-                </div>
-                {support.inquiry && support.inquiry.length > 0 && (
-                  <>
-                    <h3>問い合わせ先</h3>
-                    <div>
-                      <ReactMarkdown
-                        children={highlightText(
-                          searchWords,
-                          support.inquiry.replace(/\n/gi, "\r\n  ")
-                        )}
-                        remarkPlugins={[remarkGfm]}
-                        rehypePlugins={[rehypeRaw]}
-                      />
-                    </div>
-                  </>
-                )}
-                {support.usage && support.usage.length > 0 && (
-                  <>
-                    <h3>利用方法</h3>
-                    <div>
-                      <ReactMarkdown
-                        children={highlightText(
-                          searchWords,
-                          support.usage.replace(/\n/gi, "\r\n  ")
-                        )}
-                        remarkPlugins={[remarkGfm]}
-                        rehypePlugins={[rehypeRaw]}
-                      />
-                    </div>
-                  </>
-                )}
-                {support.governing_law && support.governing_law.length > 0 && (
-                  <>
-                    <h3>根拠法令</h3>
-                    <p>
-                      <Highlighter
-                        searchWords={searchWords}
-                        textToHighlight={support.governing_law}
-                      />
-                    </p>
-                  </>
-                )}
-                {support.catalogs && support.catalogs.length > 0 && (
-                  <>
-                    <h3>収録制度集</h3>
-                    <div>
-                      {support.catalogs.map((catalog: any) => {
-                        return (
-                          <p key={catalog.name}>
-                            <Highlighter
-                              searchWords={searchWords}
-                              textToHighlight={catalog.name}
-                            />
-                          </p>
-                        );
-                      })}
-                    </div>
-                  </>
-                )}
+                <details style={{ cursor: "pointer" }}>
+                  <summary>詳しく見る</summary>
+                  <h3>内容</h3>
+                  <div>
+                    <ReactMarkdown
+                      children={highlightText(searchWords, support.body)}
+                      remarkPlugins={[remarkGfm]}
+                      rehypePlugins={[rehypeRaw]}
+                    />
+                  </div>
+                  {support.inquiry && support.inquiry.length > 0 && (
+                    <>
+                      <h3>問い合わせ先</h3>
+                      <div>
+                        <ReactMarkdown
+                          children={highlightText(
+                            searchWords,
+                            support.inquiry.replace(/\n/gi, "\r\n  ")
+                          )}
+                          remarkPlugins={[remarkGfm]}
+                          rehypePlugins={[rehypeRaw]}
+                        />
+                      </div>
+                    </>
+                  )}
+                  {support.usage && support.usage.length > 0 && (
+                    <>
+                      <h3>利用方法</h3>
+                      <div>
+                        <ReactMarkdown
+                          children={highlightText(
+                            searchWords,
+                            support.usage.replace(/\n/gi, "\r\n  ")
+                          )}
+                          remarkPlugins={[remarkGfm]}
+                          rehypePlugins={[rehypeRaw]}
+                        />
+                      </div>
+                    </>
+                  )}
+                  {support.governing_law && support.governing_law.length > 0 && (
+                    <>
+                      <h3>根拠法令</h3>
+                      <p>
+                        <Highlighter
+                          searchWords={searchWords}
+                          textToHighlight={support.governing_law}
+                        />
+                      </p>
+                    </>
+                  )}
+                  {support.catalogs && support.catalogs.length > 0 && (
+                    <>
+                      <h3>収録制度集</h3>
+                      <div>
+                        {support.catalogs.map((catalog: any) => {
+                          return (
+                            <p key={catalog.name}>
+                              <Highlighter
+                                searchWords={searchWords}
+                                textToHighlight={catalog.name}
+                              />
+                            </p>
+                          );
+                        })}
+                      </div>
+                    </>
+                  )}
+                  <p>管理番号：{support.id}</p>
+                </details>
                 <h3>キーワード</h3>
                 {searchWords &&
                   support.all_categories.map((cat: string) => {
@@ -382,7 +386,6 @@ function App() {
                       </button>
                     );
                   })}
-                <p>管理番号：{support.id}</p>
               </div>
             );
           })}
