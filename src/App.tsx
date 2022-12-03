@@ -196,7 +196,7 @@ function App() {
       <div
         style={{
           width: "100%",
-          height: "140px",
+          height: "180px",
           overflow: "hidden scroll",
           display: "flex",
           flexWrap: "wrap",
