@@ -25,6 +25,39 @@
         "sub_categories": []
       },
       {
+        "id": "239",
+        "number": "04",
+        "name": "半壊（半焼）",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "number": "1",
+    "name": "住まいのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "236",
+        "number": "01",
+        "name": "全壊（全焼、流出、滅失）",
+        "sub_categories": []
+      },
+      {
+        "id": "237",
+        "number": "02",
+        "name": "大規模半壊",
+        "sub_categories": []
+      },
+      {
+        "id": "238",
+        "number": "03",
+        "name": "中規模半壊",
+        "sub_categories": []
+      },
+      {
         "id": "246",
         "number": "11",
         "name": "宅地に関する被害",

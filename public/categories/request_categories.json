@@ -310,6 +310,21 @@
     "deletable": false,
     "sub_categories": [
       {
+        "id": "290",
+        "number": "12",
+        "name": "相談したい・解決したい",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "40",
+    "number": "2",
+    "name": "仕事のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
         "id": "291",
         "number": "13",
         "name": "その他",
