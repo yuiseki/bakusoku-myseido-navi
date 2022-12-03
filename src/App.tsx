@@ -72,12 +72,12 @@ function App() {
     }
     const newRequests: string[] = requestsData.map((target: any) => {
       return target.sub_categories.map((cat: any) => {
-        return target.name + " " + cat.name;
+        return target.name;
       });
     });
     const newSituations: string[] = situationsData.map((target: any) => {
       return target.sub_categories.map((cat: any) => {
-        return target.name + " " + cat.name;
+        return target.name;
       });
     });
     const newQuestionsUniq = [
@@ -170,26 +170,24 @@ function App() {
         style={{
           justifyContent: "center",
           width: "100%",
-          height: "140px",
-          overflow: "hidden scroll",
           display: "grid",
-          gridTemplateColumns: "1fr",
+          gridTemplateColumns: "200px 200px 200px",
           gap: "5px",
           marginBottom: "10px",
         }}
       >
         {questions &&
-          questions.map((request: any) => {
+          questions.map((question: any) => {
             return (
               <button
                 style={{ height: "3em", lineHeight: "1.4em" }}
-                key={request}
-                value={request}
+                key={question}
+                value={question}
                 onClick={(event) => {
                   setDebouncedQuery(event.currentTarget.value);
                 }}
               >
-                {request}
+                {question}
               </button>
             );
           })}
