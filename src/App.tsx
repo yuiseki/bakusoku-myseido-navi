@@ -279,6 +279,19 @@ function App() {
                     );
                   })}
                 </h2>
+                <div
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  <img
+                    src={"./images/" + support.id + ".png"}
+                    width={256}
+                    height={256}
+                  />
+                </div>
                 <h3>
                   <Highlighter
                     searchWords={searchWords}
