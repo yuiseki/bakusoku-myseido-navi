@@ -284,10 +284,16 @@ function App() {
                     width: "100%",
                     display: "flex",
                     justifyContent: "center",
+                    gap: "30px",
                   }}
                 >
                   <img
                     src={"./images/" + support.id + ".png"}
+                    width={256}
+                    height={256}
+                  />
+                  <img
+                    src={"./images/" + support.id + "-target.png"}
                     width={256}
                     height={256}
                   />
