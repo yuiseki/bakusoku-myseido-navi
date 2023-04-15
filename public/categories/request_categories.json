@@ -94,6 +94,45 @@
         "sub_categories": []
       },
       {
+        "id": "282",
+        "number": "04",
+        "name": "補修したい（応急修理含む）",
+        "sub_categories": []
+      },
+      {
+        "id": "283",
+        "number": "05",
+        "name": "移転したい",
+        "sub_categories": []
+      },
+      {
+        "id": "285",
+        "number": "07",
+        "name": "相談したい・解決したい",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "number": "1",
+    "name": "住まいのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "279",
+        "number": "01",
+        "name": "建設したい（増築・改築含む）",
+        "sub_categories": []
+      },
+      {
+        "id": "280",
+        "number": "02",
+        "name": "購入したい",
+        "sub_categories": []
+      },
+      {
         "id": "283",
         "number": "05",
         "name": "移転したい",
@@ -457,6 +496,27 @@
         "sub_categories": []
       },
       {
+        "id": "303",
+        "number": "25",
+        "name": "相談したい・解決したい",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "43",
+    "number": "5",
+    "name": "おかねのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "301",
+        "number": "23",
+        "name": "支援金・見舞金がほしい",
+        "sub_categories": []
+      },
+      {
         "id": "304",
         "number": "26",
         "name": "その他",
@@ -520,6 +580,54 @@
         "id": "305",
         "number": "27",
         "name": "宅地のごみの片づけを支援してほしい",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "45",
+    "number": "7",
+    "name": "その他・暮らしに関すること",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "312",
+        "number": "34",
+        "name": "申請・申告・届出をしたい",
+        "sub_categories": []
+      },
+      {
+        "id": "313",
+        "number": "35",
+        "name": "情報を知りたい",
+        "sub_categories": []
+      },
+      {
+        "id": "314",
+        "number": "36",
+        "name": "相談したい・解決したい",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "45",
+    "number": "7",
+    "name": "その他・暮らしに関すること",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "313",
+        "number": "35",
+        "name": "情報を知りたい",
+        "sub_categories": []
+      },
+      {
+        "id": "314",
+        "number": "36",
+        "name": "相談したい・解決したい",
         "sub_categories": []
       }
     ]
