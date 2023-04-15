@@ -394,6 +394,39 @@
     "deletable": false,
     "sub_categories": [
       {
+        "id": "260",
+        "number": "25",
+        "name": "未就学",
+        "sub_categories": []
+      },
+      {
+        "id": "261",
+        "number": "26",
+        "name": "幼稚園（保育園等）に通っている",
+        "sub_categories": []
+      },
+      {
+        "id": "262",
+        "number": "27",
+        "name": "小学校・中学校に通っている",
+        "sub_categories": []
+      },
+      {
+        "id": "263",
+        "number": "28",
+        "name": "高等学校に通っている",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "42",
+    "number": "4",
+    "name": "子育て・教育のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
         "id": "262",
         "number": "27",
         "name": "小学校・中学校に通っている",
