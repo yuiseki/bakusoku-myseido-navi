@@ -279,6 +279,7 @@ function App() {
                     );
                   })}
                 </h2>
+                {/* 
                 <div
                   style={{
                     width: "100%",
@@ -298,6 +299,7 @@ function App() {
                     height={256}
                   />
                 </div>
+                */}
                 <h3>
                   <Highlighter
                     searchWords={searchWords}
