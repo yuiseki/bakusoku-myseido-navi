@@ -1,4 +1,4 @@
-FROM node:19-bullseye-slim
+FROM node:20-bullseye-slim
 
 WORKDIR /app
 COPY . /app
