@@ -15,7 +15,7 @@
     "react-highlight-words": "^0.20.0",
     "react-markdown": "^8.0.3",
     "rehype-raw": "^7.0.0",
-    "remark-gfm": "^3.0.1",
+    "remark-gfm": "^4.0.0",
     "swr": "^2.0.0"
   },
   "devDependencies": {
