@@ -22,7 +22,7 @@
     "@types/highlight-words-core": "^1.2.1",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
-    "@types/react-highlight-words": "^0.16.4",
+    "@types/react-highlight-words": "^0.20.0",
     "@vitejs/plugin-react": "^4.0.0",
     "typescript": "^5.0.0",
     "vite": "^5.0.0"
