@@ -1,1 +1,599 @@
-[]
+[
+  {
+    "id": "316",
+    "number": "1",
+    "name": "本人",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "319",
+        "number": "02",
+        "name": "子育て中",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "316",
+    "number": "1",
+    "name": "本人",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "319",
+        "number": "02",
+        "name": "子育て中",
+        "sub_categories": []
+      },
+      {
+        "id": "320",
+        "number": "03",
+        "name": "ひとり親",
+        "sub_categories": []
+      },
+      {
+        "id": "321",
+        "number": "04",
+        "name": "学生",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "316",
+    "number": "1",
+    "name": "本人",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "319",
+        "number": "02",
+        "name": "子育て中",
+        "sub_categories": []
+      },
+      {
+        "id": "320",
+        "number": "03",
+        "name": "ひとり親",
+        "sub_categories": []
+      },
+      {
+        "id": "321",
+        "number": "04",
+        "name": "学生",
+        "sub_categories": []
+      },
+      {
+        "id": "327",
+        "number": "10",
+        "name": "被災者",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "316",
+    "number": "1",
+    "name": "本人",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "319",
+        "number": "02",
+        "name": "子育て中",
+        "sub_categories": []
+      },
+      {
+        "id": "320",
+        "number": "03",
+        "name": "ひとり親",
+        "sub_categories": []
+      },
+      {
+        "id": "323",
+        "number": "06",
+        "name": "求職者",
+        "sub_categories": []
+      },
+      {
+        "id": "324",
+        "number": "07",
+        "name": "就業者",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "316",
+    "number": "1",
+    "name": "本人",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "319",
+        "number": "02",
+        "name": "子育て中",
+        "sub_categories": []
+      },
+      {
+        "id": "320",
+        "number": "03",
+        "name": "ひとり親",
+        "sub_categories": []
+      },
+      {
+        "id": "327",
+        "number": "10",
+        "name": "被災者",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "316",
+    "number": "1",
+    "name": "本人",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "319",
+        "number": "02",
+        "name": "子育て中",
+        "sub_categories": []
+      },
+      {
+        "id": "321",
+        "number": "04",
+        "name": "学生",
+        "sub_categories": []
+      },
+      {
+        "id": "327",
+        "number": "10",
+        "name": "被災者",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "316",
+    "number": "1",
+    "name": "本人",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "319",
+        "number": "02",
+        "name": "子育て中",
+        "sub_categories": []
+      },
+      {
+        "id": "323",
+        "number": "06",
+        "name": "求職者",
+        "sub_categories": []
+      },
+      {
+        "id": "324",
+        "number": "07",
+        "name": "就業者",
+        "sub_categories": []
+      },
+      {
+        "id": "325",
+        "number": "08",
+        "name": "高齢者",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "316",
+    "number": "1",
+    "name": "本人",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "319",
+        "number": "02",
+        "name": "子育て中",
+        "sub_categories": []
+      },
+      {
+        "id": "327",
+        "number": "10",
+        "name": "被災者",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "316",
+    "number": "1",
+    "name": "本人",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "320",
+        "number": "03",
+        "name": "ひとり親",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "316",
+    "number": "1",
+    "name": "本人",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "320",
+        "number": "03",
+        "name": "ひとり親",
+        "sub_categories": []
+      },
+      {
+        "id": "327",
+        "number": "10",
+        "name": "被災者",
+        "sub_categories": []
+      },
+      {
+        "id": "319",
+        "number": "02",
+        "name": "子育て中",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "316",
+    "number": "1",
+    "name": "本人",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "321",
+        "number": "04",
+        "name": "学生",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "316",
+    "number": "1",
+    "name": "本人",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "321",
+        "number": "04",
+        "name": "学生",
+        "sub_categories": []
+      },
+      {
+        "id": "323",
+        "number": "06",
+        "name": "求職者",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "316",
+    "number": "1",
+    "name": "本人",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "321",
+        "number": "04",
+        "name": "学生",
+        "sub_categories": []
+      },
+      {
+        "id": "325",
+        "number": "08",
+        "name": "高齢者",
+        "sub_categories": []
+      },
+      {
+        "id": "327",
+        "number": "10",
+        "name": "被災者",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "316",
+    "number": "1",
+    "name": "本人",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "321",
+        "number": "04",
+        "name": "学生",
+        "sub_categories": []
+      },
+      {
+        "id": "327",
+        "number": "10",
+        "name": "被災者",
+        "sub_categories": []
+      },
+      {
+        "id": "319",
+        "number": "02",
+        "name": "子育て中",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "316",
+    "number": "1",
+    "name": "本人",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "323",
+        "number": "06",
+        "name": "求職者",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "316",
+    "number": "1",
+    "name": "本人",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "323",
+        "number": "06",
+        "name": "求職者",
+        "sub_categories": []
+      },
+      {
+        "id": "324",
+        "number": "07",
+        "name": "就業者",
+        "sub_categories": []
+      },
+      {
+        "id": "327",
+        "number": "10",
+        "name": "被災者",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "316",
+    "number": "1",
+    "name": "本人",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "323",
+        "number": "06",
+        "name": "求職者",
+        "sub_categories": []
+      },
+      {
+        "id": "327",
+        "number": "10",
+        "name": "被災者",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "316",
+    "number": "1",
+    "name": "本人",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "326",
+        "number": "09",
+        "name": "遺族・遺児",
+        "sub_categories": []
+      },
+      {
+        "id": "327",
+        "number": "10",
+        "name": "被災者",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "316",
+    "number": "1",
+    "name": "本人",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "327",
+        "number": "10",
+        "name": "被災者",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "316",
+    "number": "1",
+    "name": "本人",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "327",
+        "number": "10",
+        "name": "被災者",
+        "sub_categories": []
+      },
+      {
+        "id": "325",
+        "number": "08",
+        "name": "高齢者",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "317",
+    "number": "2",
+    "name": "本人以外",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "330",
+        "number": "13",
+        "name": "子ども",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "317",
+    "number": "2",
+    "name": "本人以外",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "330",
+        "number": "13",
+        "name": "子ども",
+        "sub_categories": []
+      },
+      {
+        "id": "332",
+        "number": "15",
+        "name": "障がい児",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "317",
+    "number": "2",
+    "name": "本人以外",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "330",
+        "number": "13",
+        "name": "子ども",
+        "sub_categories": []
+      },
+      {
+        "id": "334",
+        "number": "17",
+        "name": "障がい者",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "317",
+    "number": "2",
+    "name": "本人以外",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "332",
+        "number": "15",
+        "name": "障がい児",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "317",
+    "number": "2",
+    "name": "本人以外",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "334",
+        "number": "17",
+        "name": "障がい者",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "516",
+    "number": "3",
+    "name": "世帯状況",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "517",
+        "number": "21",
+        "name": "災害によって収入が減少した",
+        "sub_categories": []
+      },
+      {
+        "id": "518",
+        "number": "22",
+        "name": "災害によって職を失った",
+        "sub_categories": []
+      },
+      {
+        "id": "521",
+        "number": "25",
+        "name": "住民税が非課税",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "516",
+    "number": "3",
+    "name": "世帯状況",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "521",
+        "number": "25",
+        "name": "住民税が非課税",
+        "sub_categories": []
+      }
+    ]
+  }
+]

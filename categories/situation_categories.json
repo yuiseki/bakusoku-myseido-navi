@@ -1,1 +1,704 @@
-[]
+[
+  {
+    "id": "39",
+    "number": "1",
+    "name": "住まいのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "236",
+        "number": "01",
+        "name": "全壊（全焼、流出、滅失）",
+        "sub_categories": []
+      },
+      {
+        "id": "237",
+        "number": "02",
+        "name": "大規模半壊",
+        "sub_categories": []
+      },
+      {
+        "id": "238",
+        "number": "03",
+        "name": "中規模半壊",
+        "sub_categories": []
+      },
+      {
+        "id": "239",
+        "number": "04",
+        "name": "半壊（半焼）",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "number": "1",
+    "name": "住まいのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "236",
+        "number": "01",
+        "name": "全壊（全焼、流出、滅失）",
+        "sub_categories": []
+      },
+      {
+        "id": "237",
+        "number": "02",
+        "name": "大規模半壊",
+        "sub_categories": []
+      },
+      {
+        "id": "238",
+        "number": "03",
+        "name": "中規模半壊",
+        "sub_categories": []
+      },
+      {
+        "id": "246",
+        "number": "11",
+        "name": "宅地に関する被害",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "number": "1",
+    "name": "住まいのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "236",
+        "number": "01",
+        "name": "全壊（全焼、流出、滅失）",
+        "sub_categories": []
+      },
+      {
+        "id": "237",
+        "number": "02",
+        "name": "大規模半壊",
+        "sub_categories": []
+      },
+      {
+        "id": "239",
+        "number": "04",
+        "name": "半壊（半焼）",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "number": "1",
+    "name": "住まいのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "236",
+        "number": "01",
+        "name": "全壊（全焼、流出、滅失）",
+        "sub_categories": []
+      },
+      {
+        "id": "237",
+        "number": "02",
+        "name": "大規模半壊",
+        "sub_categories": []
+      },
+      {
+        "id": "239",
+        "number": "04",
+        "name": "半壊（半焼）",
+        "sub_categories": []
+      },
+      {
+        "id": "247",
+        "number": "12",
+        "name": "家財に関する損害",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "number": "1",
+    "name": "住まいのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "236",
+        "number": "01",
+        "name": "全壊（全焼、流出、滅失）",
+        "sub_categories": []
+      },
+      {
+        "id": "239",
+        "number": "04",
+        "name": "半壊（半焼）",
+        "sub_categories": []
+      },
+      {
+        "id": "242",
+        "number": "07",
+        "name": "床上浸水",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "number": "1",
+    "name": "住まいのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "237",
+        "number": "02",
+        "name": "大規模半壊",
+        "sub_categories": []
+      },
+      {
+        "id": "239",
+        "number": "04",
+        "name": "半壊（半焼）",
+        "sub_categories": []
+      },
+      {
+        "id": "240",
+        "number": "05",
+        "name": "準半壊",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "number": "1",
+    "name": "住まいのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "245",
+        "number": "10",
+        "name": "その他住宅に関する被害",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "number": "1",
+    "name": "住まいのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "245",
+        "number": "10",
+        "name": "その他住宅に関する被害",
+        "sub_categories": []
+      },
+      {
+        "id": "246",
+        "number": "11",
+        "name": "宅地に関する被害",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "number": "1",
+    "name": "住まいのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "245",
+        "number": "10",
+        "name": "その他住宅に関する被害",
+        "sub_categories": []
+      },
+      {
+        "id": "247",
+        "number": "12",
+        "name": "家財に関する損害",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "number": "1",
+    "name": "住まいのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "246",
+        "number": "11",
+        "name": "宅地に関する被害",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "40",
+    "number": "2",
+    "name": "仕事のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "248",
+        "number": "13",
+        "name": "離職中・非正規雇用",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "40",
+    "number": "2",
+    "name": "仕事のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "248",
+        "number": "13",
+        "name": "離職中・非正規雇用",
+        "sub_categories": []
+      },
+      {
+        "id": "253",
+        "number": "18",
+        "name": "低収入",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "40",
+    "number": "2",
+    "name": "仕事のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "250",
+        "number": "15",
+        "name": "中高年齢",
+        "sub_categories": []
+      },
+      {
+        "id": "251",
+        "number": "16",
+        "name": "障がい",
+        "sub_categories": []
+      },
+      {
+        "id": "253",
+        "number": "18",
+        "name": "低収入",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "40",
+    "number": "2",
+    "name": "仕事のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "253",
+        "number": "18",
+        "name": "低収入",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "41",
+    "number": "3",
+    "name": "医療福祉のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "255",
+        "number": "20",
+        "name": "病気",
+        "sub_categories": []
+      },
+      {
+        "id": "256",
+        "number": "21",
+        "name": "ケガ",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "41",
+    "number": "3",
+    "name": "医療福祉のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "255",
+        "number": "20",
+        "name": "病気",
+        "sub_categories": []
+      },
+      {
+        "id": "256",
+        "number": "21",
+        "name": "ケガ",
+        "sub_categories": []
+      },
+      {
+        "id": "257",
+        "number": "22",
+        "name": "ストレス・心の病",
+        "sub_categories": []
+      },
+      {
+        "id": "258",
+        "number": "23",
+        "name": "障がい",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "41",
+    "number": "3",
+    "name": "医療福祉のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "256",
+        "number": "21",
+        "name": "ケガ",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "41",
+    "number": "3",
+    "name": "医療福祉のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "258",
+        "number": "23",
+        "name": "障がい",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "42",
+    "number": "4",
+    "name": "子育て・教育のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "262",
+        "number": "27",
+        "name": "小学校・中学校に通っている",
+        "sub_categories": []
+      },
+      {
+        "id": "263",
+        "number": "28",
+        "name": "高等学校に通っている",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "42",
+    "number": "4",
+    "name": "子育て・教育のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "262",
+        "number": "27",
+        "name": "小学校・中学校に通っている",
+        "sub_categories": []
+      },
+      {
+        "id": "263",
+        "number": "28",
+        "name": "高等学校に通っている",
+        "sub_categories": []
+      },
+      {
+        "id": "264",
+        "number": "29",
+        "name": "大学・専門学校等に通っている",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "42",
+    "number": "4",
+    "name": "子育て・教育のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "262",
+        "number": "27",
+        "name": "小学校・中学校に通っている",
+        "sub_categories": []
+      },
+      {
+        "id": "263",
+        "number": "28",
+        "name": "高等学校に通っている",
+        "sub_categories": []
+      },
+      {
+        "id": "265",
+        "number": "30",
+        "name": "特別支援学校等へ通っている",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "42",
+    "number": "4",
+    "name": "子育て・教育のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "263",
+        "number": "28",
+        "name": "高等学校に通っている",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "42",
+    "number": "4",
+    "name": "子育て・教育のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "263",
+        "number": "28",
+        "name": "高等学校に通っている",
+        "sub_categories": []
+      },
+      {
+        "id": "264",
+        "number": "29",
+        "name": "大学・専門学校等に通っている",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "42",
+    "number": "4",
+    "name": "子育て・教育のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "263",
+        "number": "28",
+        "name": "高等学校に通っている",
+        "sub_categories": []
+      },
+      {
+        "id": "265",
+        "number": "30",
+        "name": "特別支援学校等へ通っている",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "42",
+    "number": "4",
+    "name": "子育て・教育のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "264",
+        "number": "29",
+        "name": "大学・専門学校等に通っている",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "42",
+    "number": "4",
+    "name": "子育て・教育のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "265",
+        "number": "30",
+        "name": "特別支援学校等へ通っている",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "43",
+    "number": "5",
+    "name": "おかねのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "266",
+        "number": "31",
+        "name": "家族が亡くなった",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "43",
+    "number": "5",
+    "name": "おかねのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "267",
+        "number": "32",
+        "name": "負傷した（家族も含む）",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "43",
+    "number": "5",
+    "name": "おかねのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "269",
+        "number": "34",
+        "name": "その他（収入減など）",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "44",
+    "number": "6",
+    "name": "ごみ・災害ごみのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "271",
+        "number": "36",
+        "name": "災害ごみの運搬ができない",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "45",
+    "number": "7",
+    "name": "その他・暮らしに関すること",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "273",
+        "number": "38",
+        "name": "税金・国保・年金",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "45",
+    "number": "7",
+    "name": "その他・暮らしに関すること",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "274",
+        "number": "39",
+        "name": "各種手続き",
+        "sub_categories": []
+      },
+      {
+        "id": "275",
+        "number": "40",
+        "name": "水道・生活インフラ",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "45",
+    "number": "7",
+    "name": "その他・暮らしに関すること",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "275",
+        "number": "40",
+        "name": "水道・生活インフラ",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "45",
+    "number": "7",
+    "name": "その他・暮らしに関すること",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "278",
+        "number": "43",
+        "name": "その他",
+        "sub_categories": []
+      }
+    ]
+  }
+]
