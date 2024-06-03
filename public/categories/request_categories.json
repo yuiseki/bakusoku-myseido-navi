@@ -1,1 +1,626 @@
-[]
+[
+  {
+    "id": "39",
+    "number": "1",
+    "name": "住まいのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "279",
+        "number": "01",
+        "name": "建設したい（増築・改築含む）",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "number": "1",
+    "name": "住まいのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "279",
+        "number": "01",
+        "name": "建設したい（増築・改築含む）",
+        "sub_categories": []
+      },
+      {
+        "id": "280",
+        "number": "02",
+        "name": "購入したい",
+        "sub_categories": []
+      },
+      {
+        "id": "281",
+        "number": "03",
+        "name": "解体したい",
+        "sub_categories": []
+      },
+      {
+        "id": "282",
+        "number": "04",
+        "name": "補修したい（応急修理含む）",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "number": "1",
+    "name": "住まいのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "279",
+        "number": "01",
+        "name": "建設したい（増築・改築含む）",
+        "sub_categories": []
+      },
+      {
+        "id": "280",
+        "number": "02",
+        "name": "購入したい",
+        "sub_categories": []
+      },
+      {
+        "id": "282",
+        "number": "04",
+        "name": "補修したい（応急修理含む）",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "number": "1",
+    "name": "住まいのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "279",
+        "number": "01",
+        "name": "建設したい（増築・改築含む）",
+        "sub_categories": []
+      },
+      {
+        "id": "280",
+        "number": "02",
+        "name": "購入したい",
+        "sub_categories": []
+      },
+      {
+        "id": "283",
+        "number": "05",
+        "name": "移転したい",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "number": "1",
+    "name": "住まいのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "279",
+        "number": "01",
+        "name": "建設したい（増築・改築含む）",
+        "sub_categories": []
+      },
+      {
+        "id": "282",
+        "number": "04",
+        "name": "補修したい（応急修理含む）",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "number": "1",
+    "name": "住まいのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "280",
+        "number": "02",
+        "name": "購入したい",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "number": "1",
+    "name": "住まいのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "282",
+        "number": "04",
+        "name": "補修したい（応急修理含む）",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "number": "1",
+    "name": "住まいのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "283",
+        "number": "05",
+        "name": "移転したい",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "number": "1",
+    "name": "住まいのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "284",
+        "number": "06",
+        "name": "宅地整備したい",
+        "sub_categories": []
+      },
+      {
+        "id": "286",
+        "number": "08",
+        "name": "その他",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "number": "1",
+    "name": "住まいのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "285",
+        "number": "07",
+        "name": "相談したい・解決したい",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "number": "1",
+    "name": "住まいのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "285",
+        "number": "07",
+        "name": "相談したい・解決したい",
+        "sub_categories": []
+      },
+      {
+        "id": "286",
+        "number": "08",
+        "name": "その他",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "number": "1",
+    "name": "住まいのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "286",
+        "number": "08",
+        "name": "その他",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "40",
+    "number": "2",
+    "name": "仕事のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "287",
+        "number": "09",
+        "name": "就職したい",
+        "sub_categories": []
+      },
+      {
+        "id": "289",
+        "number": "11",
+        "name": "職業訓練を受けたい",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "40",
+    "number": "2",
+    "name": "仕事のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "287",
+        "number": "09",
+        "name": "就職したい",
+        "sub_categories": []
+      },
+      {
+        "id": "289",
+        "number": "11",
+        "name": "職業訓練を受けたい",
+        "sub_categories": []
+      },
+      {
+        "id": "290",
+        "number": "12",
+        "name": "相談したい・解決したい",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "40",
+    "number": "2",
+    "name": "仕事のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "287",
+        "number": "09",
+        "name": "就職したい",
+        "sub_categories": []
+      },
+      {
+        "id": "290",
+        "number": "12",
+        "name": "相談したい・解決したい",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "40",
+    "number": "2",
+    "name": "仕事のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "288",
+        "number": "10",
+        "name": "未払賃金を払ってほしい",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "40",
+    "number": "2",
+    "name": "仕事のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "290",
+        "number": "12",
+        "name": "相談したい・解決したい",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "40",
+    "number": "2",
+    "name": "仕事のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "291",
+        "number": "13",
+        "name": "その他",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "41",
+    "number": "3",
+    "name": "医療福祉のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "293",
+        "number": "15",
+        "name": "治療したい（医薬品がほしい含む）",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "41",
+    "number": "3",
+    "name": "医療福祉のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "296",
+        "number": "18",
+        "name": "その他",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "42",
+    "number": "4",
+    "name": "子育て・教育のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "297",
+        "number": "19",
+        "name": "入学金・授業料を支援してほしい",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "42",
+    "number": "4",
+    "name": "子育て・教育のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "297",
+        "number": "19",
+        "name": "入学金・授業料を支援してほしい",
+        "sub_categories": []
+      },
+      {
+        "id": "298",
+        "number": "20",
+        "name": "授業料以外（学用品等）を支援してほしい",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "42",
+    "number": "4",
+    "name": "子育て・教育のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "298",
+        "number": "20",
+        "name": "授業料以外（学用品等）を支援してほしい",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "42",
+    "number": "4",
+    "name": "子育て・教育のこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "299",
+        "number": "21",
+        "name": "相談したい・解決したい",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "43",
+    "number": "5",
+    "name": "おかねのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "301",
+        "number": "23",
+        "name": "支援金・見舞金がほしい",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "43",
+    "number": "5",
+    "name": "おかねのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "301",
+        "number": "23",
+        "name": "支援金・見舞金がほしい",
+        "sub_categories": []
+      },
+      {
+        "id": "303",
+        "number": "25",
+        "name": "相談したい・解決したい",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "43",
+    "number": "5",
+    "name": "おかねのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "302",
+        "number": "24",
+        "name": "お金を貸してほしい",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "43",
+    "number": "5",
+    "name": "おかねのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "302",
+        "number": "24",
+        "name": "お金を貸してほしい",
+        "sub_categories": []
+      },
+      {
+        "id": "303",
+        "number": "25",
+        "name": "相談したい・解決したい",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "43",
+    "number": "5",
+    "name": "おかねのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "302",
+        "number": "24",
+        "name": "お金を貸してほしい",
+        "sub_categories": []
+      },
+      {
+        "id": "303",
+        "number": "25",
+        "name": "相談したい・解決したい",
+        "sub_categories": []
+      },
+      {
+        "id": "304",
+        "number": "26",
+        "name": "その他",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "43",
+    "number": "5",
+    "name": "おかねのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "303",
+        "number": "25",
+        "name": "相談したい・解決したい",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "43",
+    "number": "5",
+    "name": "おかねのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "304",
+        "number": "26",
+        "name": "その他",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "44",
+    "number": "6",
+    "name": "ごみ・災害ごみのこと",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "305",
+        "number": "27",
+        "name": "宅地のごみの片づけを支援してほしい",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "45",
+    "number": "7",
+    "name": "その他・暮らしに関すること",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "314",
+        "number": "36",
+        "name": "相談したい・解決したい",
+        "sub_categories": []
+      }
+    ]
+  },
+  {
+    "id": "45",
+    "number": "7",
+    "name": "その他・暮らしに関すること",
+    "remarks": "",
+    "deletable": false,
+    "sub_categories": [
+      {
+        "id": "315",
+        "number": "37",
+        "name": "その他",
+        "sub_categories": []
+      }
+    ]
+  }
+]
