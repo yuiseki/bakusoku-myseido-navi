@@ -1,0 +1,21 @@
+name: lint
+
+on: push
+
+jobs:
+  tsc:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Extract node version
+        run: echo "NODE_VERSION=$(cat .node_version)" >> $GITHUB_ENV
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: npm ci
+      - name: lint
+        run: npm run lint
