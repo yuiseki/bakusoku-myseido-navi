@@ -10,7 +10,7 @@
     "preview": "vite preview --port 30000 --host 0.0.0.0"
   },
   "dependencies": {
-    "highlight-words-core": "^1.2.2",
+    "highlight-words-core": "^2.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-highlight-words": "^0.21.0",
